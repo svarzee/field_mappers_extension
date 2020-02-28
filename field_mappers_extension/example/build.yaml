@@ -1,0 +1,6 @@
+targets:
+  $default:
+    builders:
+      class_extensions:
+        generate_for:
+        - lib/*.dart

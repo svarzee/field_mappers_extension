@@ -1,0 +1,19 @@
+name: field_mappers_extension
+version: 0.1.0
+author: svarzee <svarzee@gmail.com>
+homepage: https://github.com/svarzee/field_mappers_extension
+description: >-
+  Uses class_extensions to generate field mappers.
+  Field mappers are a convenient way of constructing copies of immutable objects with altered values.
+environment:
+  sdk: '>=2.6.0 <3.0.0'
+
+dependencies:
+  class_extensions: ^0.10.0
+  field_mappers_extension_annotations: ^0.1.0
+  analyzer: ^0.39.0
+  build: '>=0.12.6 <2.0.0'
+  source_gen: ^0.9.0
+
+dev_dependencies:
+  build_runner: ^1.0.0

@@ -1,0 +1,6 @@
+builders:
+  dummy_extension_generators:
+    import: "package:field_mappers_extension/field_mappers_extension.dart"
+    builder_factories: ["fieldMappersDummyBuilder"]
+    build_extensions: {".dart": []}
+    auto_apply: dependents

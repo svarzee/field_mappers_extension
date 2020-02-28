@@ -1,0 +1,8 @@
+name: example
+
+dependencies:
+  field_mappers_extension_annotations: ^0.1.0
+
+dev_dependencies:
+  build_runner: ^1.0.0
+  field_mappers_extension: ^0.1.0
