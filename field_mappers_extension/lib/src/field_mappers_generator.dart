@@ -15,7 +15,7 @@ class FieldMappersGenerator extends ClassExtensionGenerator<FieldMappers> {
 
   String _generateFieldMapper(ClassElement clazz, FieldElement field) {
     final fieldMapperName = 'map${field.name[0].toUpperCase()}${field.name.substring(1)}';
-    return '${clazz.name} ${fieldMapperName}(${field.type.name} Function(${field.type.name}) map) => ${clazz.name}${_generateCtor(clazz, field)};';
+    return '${clazz.name} ${fieldMapperName}(${field.type.toString()} Function(${field.type.toString()}) map) => ${clazz.name}${_generateCtor(clazz, field)};';
   }
 
   String _generateCtor(ClassElement clazz, FieldElement field) {
@@ -27,6 +27,8 @@ class FieldMappersGenerator extends ClassExtensionGenerator<FieldMappers> {
   }
 
   String _generateCtorArg(ClassElement clazz, FieldElement field, ParameterElement param) {
-    return field.name == param.name ? 'map((this as ${clazz.name}).${param.name})' : '(this as ${clazz.name}).${param.name}';
+    return field.name == param.name
+        ? 'map((this as ${clazz.name}).${param.name})'
+        : '(this as ${clazz.name}).${param.name}';
   }
 }
